@@ -21,7 +21,9 @@ Chrome.sync.storage keys
 
 2. obj.Stored_ReminderArray_key : stores UserReminderArray, which saves data of block website array: table(id="BLOCK_table1")
 
+3. obj.History_Array_key = saves data from History_array
 
+4. obj.myKey = saves data from URLarray
 
 Other Arrays:
 1.UserInputArray
@@ -41,9 +43,21 @@ example: URLarray[0] = {endTime:0,startTime:0,time:50.882500037550926,website:"c
 
 
 background_history.js
-Important Arrays:
 1. History_array: Every night 11.59 AM, pushInHistoryArray() runs. This method copies relevent the data from URLarray and saves it in History_array and also clears URLarray. So history array contain browing history in the format: {website:"google", time: 40}. However, it will not contain todays' data.
 
-2.
+background_reminder.js
+1.UserReminderArray_background: Saves data of reminder table. 
 
+options.js
+1.UserInputArray : save data from block website table
+2.rowDataArray
+
+options_draw_graph.js
+1.plotLineArray
+2.finalPlotArray
+3.History_array (This is different from History_array of background.js, however stores same data)
+4.URLarray (This is different from URLarray of background.js, however stores same data)
+
+options_Reminder.js
+1. UserReminderArray
 
